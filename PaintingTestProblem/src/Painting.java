@@ -14,4 +14,6 @@ public class Painting {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
     }
+
+
 }
