@@ -1,17 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Johan Magnusson
  *         Date: 2016-02-09
  */
 public class Yolo {
     public static void main(String[] args) {
-        System.out.println("Lol: " + add(4, 7));
+        List<PaintingPoint> paintingPoints = new ArrayList<PaintingPoint>();
+        paintingPoints.add(new PaintingPoint(0, 0, true));
+        paintingPoints.add(new PaintingPoint(0, 1, false));
+        paintingPoints.add(new PaintingPoint(1, 0, false));
+        paintingPoints.add(new PaintingPoint(1, 1, true));
 
-        for (int i = 0; i < 30; i++) {
-            System.out.println("Hej Ciffe");
-        }
+        Painting painting = new Painting(2, 2, paintingPoints);
+        FileManager.createSubmissionFile(painting.convertPaintingPointsToCommands());
     }
 
-    public static int add(int a, int b) {
-        return a + b;
-    }
 }

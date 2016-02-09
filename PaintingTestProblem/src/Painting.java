@@ -18,14 +18,13 @@ public class Painting {
         this.paintingPoints = paintingPoints;
     }
 
-    public void convertPaintingPointsToCommands() {
-        List<Command> commands = new ArrayList<>();
+    public List<Command> convertPaintingPointsToCommands() {
+        List<Command> commands = new ArrayList<Command>();
         for(PaintingPoint paintingPoint : paintingPoints) {
             if (paintingPoint.shouldBePainted()) {
                 commands.add(new CommandPaintLine(paintingPoint, paintingPoint));
             }
         }
+        return commands;
     }
-
-
 }

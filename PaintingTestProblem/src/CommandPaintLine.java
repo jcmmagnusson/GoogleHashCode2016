@@ -14,7 +14,7 @@ public class CommandPaintLine implements Command {
 
     @Override
     public String getCommandOutput() {
-        return "PAINT_LINE" + paintingPointStart.row + " " + paintingPointStart.column + " " + paintingPointStop.row + " " + paintingPointStop.column;
+        return "PAINT_LINE " + paintingPointStart.row + " " + paintingPointStart.column + " " + paintingPointStop.row + " " + paintingPointStop.column;
 
     }
 }
