@@ -7,7 +7,7 @@ public class Yolo {
         System.out.println("Lol: " + add(4, 7));
 
         for (int i = 0; i < 30; i++) {
-
+            System.out.println("Hej");
         }
     }
 
