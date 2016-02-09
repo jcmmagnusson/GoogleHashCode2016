@@ -13,5 +13,7 @@ public class PaintingPoint {
         this.shouldBePainted = shouldBePainted;
     }
 
-
+    public boolean shouldBePainted() {
+        return shouldBePainted;
+    }
 }
