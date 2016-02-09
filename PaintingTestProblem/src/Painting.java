@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -8,11 +10,21 @@ import java.util.Set;
 public class Painting {
     private final int numberOfRows;
     private final int numberOfColumns;
-    private PaintingPoint[][] paintingGrid;
+    private List<PaintingPoint> paintingPoints;
 
-    public Painting(int numberOfRows, int numberOfColumns) {
+    public Painting(int numberOfRows, int numberOfColumns, List<PaintingPoint> paintingPoints) {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
+        this.paintingPoints = paintingPoints;
+    }
+
+    public void convertPaintingPointsToCommands() {
+        List<Command> commands = new ArrayList<>();
+        for(PaintingPoint paintingPoint : paintingPoints) {
+            if (paintingPoint.shouldBePainted()) {
+                commands.add(new CommandPaintLine(paintingPoint, paintingPoint));
+            }
+        }
     }
 
 
