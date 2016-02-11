@@ -39,23 +39,4 @@ public class FileManager {
     private static boolean isPaintChar(char inputChar) {
         return inputChar == '#';
     }
-
-    public static void createSubmissionFile(List<Command> commands, String fileName) {
-        int numberOfCommands = commands.size();
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(numberOfCommands).append("\n");
-
-        for (Command command : commands) {
-            stringBuilder.append(command.getCommandOutput()).append("\n");
-        }
-
-        FileWriter fileWriter;
-        try {
-            fileWriter = new FileWriter(fileName);
-            fileWriter.write(stringBuilder.toString());
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

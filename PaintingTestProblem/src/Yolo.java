@@ -19,11 +19,11 @@ public class Yolo {
 
         Painting learnAndTeachPainting = FileManager.readInputFile("PaintingTestProblem/InputFilesFromGoogle/" + LEARN_AND_TEACH + ".in");
         Painting logoPainting = FileManager.readInputFile("PaintingTestProblem/InputFilesFromGoogle/" + LOGO + ".in");
-        Painting rightAnglePainting = FileManager.readInputFile("PaintingTestProblem/InputFilesFromGoogle/" + RIGHT_ANGLE + ".in");
-
-        FileManager.createSubmissionFile(learnAndTeachPainting.convertPaintingPointsToCommands(), LEARN_AND_TEACH);
-        FileManager.createSubmissionFile(logoPainting.convertPaintingPointsToCommands(), LOGO);
-        FileManager.createSubmissionFile(rightAnglePainting.convertPaintingPointsToCommands(), RIGHT_ANGLE);
+//        Painting rightAnglePainting = FileManager.readInputFile("PaintingTestProblem/InputFilesFromGoogle/" + RIGHT_ANGLE + ".in");
+//
+//        FileManager.createSubmissionFile(learnAndTeachPainting.convertPaintingPointsToCommands(), LEARN_AND_TEACH);
+//        FileManager.createSubmissionFile(logoPainting.convertPaintingPointsToCommands(), LOGO);
+//        FileManager.createSubmissionFile(rightAnglePainting.convertPaintingPointsToCommands(), RIGHT_ANGLE);
     }
 
 }
